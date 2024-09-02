@@ -29,6 +29,11 @@
       "id": 6,
       "value": "Complete Redux",
       "completed": true
+    },
+    {
+      "value": "Suman",
+      "completed": true,
+      "id": 7
     }
   ]
 }
