@@ -1,5 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import axios from "axios";
+import { createApi } from "@reduxjs/toolkit/query/react";
 import { fetchData } from "./Api";
 
 export const customApi = createApi({

@@ -79,10 +79,10 @@ export default function Home() {
             <p className="text-center">Loading...</p>
           ) : isError ? (
             <p className="text-center">
-              {error.error || "Something went wrong"}
+              {error.message || "Something went wrong"}
             </p>
           ) : (
-            tasksList.map((task) => (
+            tasksList && tasksList.length && tasksList.map((task) => (
               <Task
                 key={task.id}
                 task={task}

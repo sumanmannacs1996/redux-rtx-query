@@ -11,27 +11,31 @@ axios.interceptors.request.use((request) => {
 
 export const fetchData = async (url, method, payload) => {
   if (method === "get") {
-    return axios
-      .get(url)
-      .then((response) => response)
-      .catch((error) => error.message);
+    try {
+      return axios.get(url).then((response) => response);
+    } catch (error) {
+      return error;
+    }
   }
   if (method === "post") {
-    return axios
-      .post(url, payload)
-      .then((response) => response)
-      .catch((error) => error.message);
+    try {
+      return axios.post(url, payload).then((response) => response);
+    } catch (error) {
+      return error;
+    }
   }
   if (method === "patch") {
-    return axios
-      .patch(url, payload)
-      .then((response) => response)
-      .catch((error) => error.message);
+    try {
+      return axios.patch(url, payload).then((response) => response);
+    } catch (error) {
+      return error;
+    }
   }
   if (method === "delete") {
-    return axios
-      .delete(url)
-      .then((response) => response)
-      .catch((error) => error.message);
+    try {
+      return axios.delete(url).then((response) => response);
+    } catch (error) {
+      return error;
+    }
   }
 };
